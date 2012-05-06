@@ -1,7 +1,7 @@
 var assert = require('assert');
-var tressa = require('tressa');
+var asserts = require('../');
 
-tressa({
+asserts({
   "foo": function() {
     assert.equal("something", "something", "optional message");
     assert.equal(2, 2);

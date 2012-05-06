@@ -8,7 +8,7 @@ Test grouping and formatting to make working with vanilla node assert marginally
 
 # Installation
 ```
-npm install tressa
+npm install asserts
 ```
 
 or in package.json
@@ -17,19 +17,19 @@ or in package.json
 {
   ...
   "dependencies": {
-    "tressa": "~0.3.0"
+    "asserts": "~0.3.0"
   }
 }
 ```
 
 # Usage
-[examples/happy.js](https://github.com/stephenhandley/tressa/blob/master/examples/happy.js) looks like this: 
+[examples/happy.js](https://github.com/stephenhandley/asserts/blob/master/examples/happy.js) looks like this: 
 
 ```js
 var assert = require('assert');
-var tressa = require('tressa');
+var asserts = require('asserts');
 
-tressa({
+asserts({
   "foo": function() {
     assert.equal("something", "something", "optional message");
     assert.equal(2, 2);
@@ -58,13 +58,13 @@ $ node happy.js
 
 ```
 
-[examples/sad.js](https://github.com/stephenhandley/tressa/blob/master/examples/sad.js) looks like this: 
+[examples/sad.js](https://github.com/stephenhandley/asserts/blob/master/examples/sad.js) looks like this: 
 
 ```js
 var assert = require('assert');
-var tressa = require('tressa');
+var asserts = require('asserts');
 
-tressa({
+asserts({
   "foo": function() {
     assert.equal("something", "something", "optional message");
     assert.equal(2, 2);

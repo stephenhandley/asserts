@@ -1,5 +1,5 @@
 {
-  "name": "tressa",
+  "name": "asserts",
   
   "description": "Test grouping and formatting to make working with vanilla node assert marginally easier",
   
@@ -9,7 +9,7 @@
   
   "repository": {
     "type": "git",
-    "url": "git://github.com/stephenhandley/tressa.git"
+    "url": "git://github.com/stephenhandley/asserts.git"
   },
   
   "main": "index.js",
@@ -24,7 +24,7 @@
   },
   
   "bugs": { 
-    "url" : "http://github.com/stephenhandley/tressa/issues"
+    "url" : "http://github.com/stephenhandley/asserts/issues"
   },
   
   "engines" : {
