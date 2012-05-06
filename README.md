@@ -50,7 +50,7 @@ and when run looks like this:
 
 $ node happy.js 
 
-:)  foo
+:) foo
 
 
 :) barf ing
@@ -87,7 +87,7 @@ and when run looks like this:
 ```sh
 macbook:examples stephen$ node sad.js
 
-:)  foo
+:) foo
 
 
 :) barf ing
@@ -97,4 +97,4 @@ macbook:examples stephen$ node sad.js
    yep: Expected 3 but got 2
 ```
 
-but with green for :) and red for :( that aren't showing up here but do in the console. 
+but with green for :) and red for :( that aren't showing up here but do in the console (i, yam lazy) 
