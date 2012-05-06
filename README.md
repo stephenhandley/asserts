@@ -4,7 +4,7 @@ Test grouping and formatting to make working with vanilla node assert marginally
 
 # Latest Version
 
-0.1.0
+0.1.1
 
 # Installation
 ```
@@ -17,7 +17,7 @@ or in package.json
 {
   ...
   "dependencies": {
-    "tressa": "~0.1.0"
+    "tressa": "~0.1.1"
   }
 }
 ```
