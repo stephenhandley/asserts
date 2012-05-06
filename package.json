@@ -1,0 +1,39 @@
+{
+  "name": "tressa",
+  
+  "description": "Test grouping and formatting to make working with vanilla node assert marginally easier",
+  
+  "version": "0.1.0",
+  
+  "license" : "MIT",
+  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenhandley/tressa.git"
+  },
+  
+  "main": "index.js",
+  
+  "keywords": [
+    "test", 
+    "assert"
+  ],
+  
+  "directories" : {
+    "lib" : "."
+  },
+  
+  "bugs": { 
+    "url" : "http://github.com/stephenhandley/tressa/issues"
+  },
+  
+  "engines" : {
+    "node" : ">=0.4.0"
+  },
+  
+  "author": {
+    "name": "Stephen Handley",
+    "email": "stephen.handley@gmail.com",
+    "url": "http://person.sh"
+  }
+}
