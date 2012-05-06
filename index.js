@@ -26,7 +26,7 @@ var tressa = function(groups) {
       }
     }
   }
-  console.log("")
+  console.log("");
 }
 
 module.exports = tressa;

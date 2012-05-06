@@ -24,8 +24,8 @@ or in package.json
 
 # Usage
 ```js
-assert = require('assert')
-tressa = require('tressa')
+assert = require('assert');
+tressa = require('tressa');
 
 tressa({
   "<Name for group>": function() {
@@ -33,5 +33,5 @@ tressa({
     assert.equal("<expected2>", "<actual2>", "<message2>");
     // ...
   }
-})
+});
 ```
