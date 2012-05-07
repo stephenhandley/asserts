@@ -75,37 +75,37 @@
   };
   
   var display = function(results, level) {
-    var output, label, color;
-    
+    var label, emo, color, output;
     var emo_indent = 3;
+    var level0 = (level === 0);
         
     for (label in results) {
       result = results[label];
       
       if (result.passed) {
-        output = (level === 0) ? ":) " : "";
+        emo = ':)';
         color = 'green';
         
       } else {   
-        output = (level === 0) ? ":( " : "";
+        emo = ':('
         color = 'red';
-      }
+      } 
       
-      output += label;
+      output = (level0 ? (emo + ' ') : '') + label;
       console.log(indent(level) + stylize(output, ['bold', color]));
       
       if (result.type === 'atom') {
         if (!result.passed) {
-          var indent_level = (level === 0) ? emo_indent + 1 : level + 1;
+          var indent_level = level0 ? (emo_indent + 1) : (level + 1);
           console.log(indent(indent_level) + stylize(result.message, 'red'));
         }
         
       } else {
-        var new_level = ((level === 0) ? emo_indent : level) + 1;
+        var new_level = (level0 ? emo_indent : level) + 1;
         display(result.items, new_level);
       }
       
-      if (level === 0) { console.log(); }
+      if (level0) { console.log(); }
     }
   }
   
