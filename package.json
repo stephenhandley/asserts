@@ -20,7 +20,8 @@
   ],
   
   "directories" : {
-    "lib" : "."
+    "lib" : ".",
+    "examples": "examples"
   },
   
   "bugs": { 
