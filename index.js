@@ -1,9 +1,33 @@
-(function() {  
+(function() { 
+  var assert = require('assert');
+   
   var type       = function(obj) { return {}.toString.call(obj); };
   var isFunction = function(obj) { return (type(obj) === '[object Function]'); };
   var isObject   = function(obj) { return (type(obj) === '[object Object]'); };
   var isArray    = function(obj) { return (type(obj) === '[object Array]'); };
   
+  var asserts = function(tests) {
+    var results = traverse(tests);
+    console.log('');
+    display(results, 0);
+  };
+  
+  var allEqual = function(obj, fn, expectations) {
+    if (arguments.length === 2) {
+      expectations = fn;
+      fn = obj;
+      obj = null;
+    }
+    for (var e in expectations) {
+      var args = expectations[e];
+      if (!(isArray(args) && args.length > 0)) { args = [args]; }
+      assert.equal(fn.apply(obj, args), e);
+    }
+  };
+  
+  module.exports = asserts;
+  module.exports.allEqual = allEqual;
+    
   var traverse = function(tests) {
     var result = {}
     var test;
@@ -132,12 +156,6 @@
     var result = '';
     for (;length > 0; length--) { result += ' '; }
     return result;
-  };
-  
-  module.exports = function(tests) {
-    var results = traverse(tests);
-    console.log('');
-    display(results, 0);
   };
 })();
 
