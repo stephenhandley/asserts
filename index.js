@@ -12,16 +12,35 @@
     display(results, 0);
   };
   
+  var assertApply = function(expectation, fn, obj, args) {
+    if (!(isArray(args) && args.length > 0)) { args = [args]; }
+    assert.equal(expectation, fn.apply(obj, args));
+  }
+  
   var allEqual = function(obj, fn, expectations) {
     if (arguments.length === 2) {
       expectations = fn;
       fn = obj;
       obj = null;
     }
-    for (var e in expectations) {
-      var args = expectations[e];
-      if (!(isArray(args) && args.length > 0)) { args = [args]; }
-      assert.equal(fn.apply(obj, args), e);
+    
+    if (isArray(expectations)) {
+      if ((expectations.length % 2) !== 0) {
+        throw new Error("Expectations argument as array to asserts.allEqual must have even number of elements")
+      }
+      for (var i = 0; i < expectations.length; i += 2) {
+        assertApply(expectations[i], fn, obj, expectations[i + 1]);
+      }
+      
+      
+    } else if (isObject(expectations)) {
+      for (var e in expectations) {
+        var args = expectations[e];
+        assertApply(e, fn, obj, args);
+      }
+    
+    } else {
+      throw new Error("Invalid type for expectations argument to asserts.allEqual")
     }
   };
   
