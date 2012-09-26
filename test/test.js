@@ -1,49 +1,50 @@
-var assert = require('assert');
-var asserts = require('../');
+var Assert = require('assert');
+var Asserts = require('../lib');
+var Display = require('../lib/display');
 
 try {
 
-  var test1 = asserts(function () {
+  var test1 = Asserts(function () {
     var blah = "blah";
     return {
       ack: function () {
-        assert.equal(blah, "blah");
+        Assert.equal(blah, "blah");
       },
       smack: function () {
-        assert.equal("hi", "hi");
+        Assert.equal("hi", "hi");
       }
     };
   });
   
-  assert.equal(test1, true);
+  Assert.equal(test1, true);
   
-  var test2 = asserts({
+  var test2 = Asserts({
     something: {
       yes: function () {
-        assert.equal(1, 1);
+        Assert.equal(1, 1);
       },
       no: function () {
-        assert.equal("hi", "fail");
+        Assert.equal("hi", "fail");
       }
     }
   });
   
-  assert.equal(test2, false);
+  Assert.equal(test2, false);
   
   function plus2 (x) { return x + 2; };
   
-  var test3 = asserts.allEqual(plus2, [[2, 4], [5, 7], [111111, 111113]]);
-  assert.equal(test3, true);
+  var test3 = Asserts.allEqual(plus2, [[2, 4], [5, 7], [111111, 111113]]);
+  Assert.equal(test3, true);
   
   var str = "hihi";
-  var test4 = asserts.allEqual(str, str.indexOf, {
+  var test4 = Asserts.allEqual(str, str.indexOf, {
     h: 0,
     hi: 0,
     i: 1
   });
-  assert.equal(test4, true);
+  Assert.equal(test4, true);
   
-  console.log(asserts.stylizeError("----------------\nTEST TEST PASSED\n----------------", ['bold', 'green']));
+  console.log(Display.stylize("----------------\nTEST TEST PASSED\n----------------", ['bold', 'green']));
 
 } catch (error) {
   console.log("Test Failed.");
@@ -51,6 +52,6 @@ try {
   console.log("     Actual: " + error.actual); 
   console.log(error);
   
-  console.log(asserts.stylizeError("----------------\nTEST TEST FAILED\n----------------", ['bold', 'red']));
+  console.log(Display.stylize("----------------\nTEST TEST FAILED\n----------------", ['bold', 'red']));
   
 }

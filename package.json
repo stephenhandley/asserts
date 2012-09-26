@@ -1,9 +1,9 @@
 {
   "name": "asserts",
   "description": "Test grouping and formatting to make working with vanilla node assert marginally easier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license" : "MIT",
-  "main": "index.js",
+  "main": "lib",
   
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   ],
   
   "directories" : {
-    "lib" : ".",
+    "lib" : "lib",
     "test": "test",
     "examples": "examples"
   },
