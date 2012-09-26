@@ -29,9 +29,6 @@ or in package.json
 var assert = require('assert');
 var asserts = require('asserts');
 
-#Build status
-[![build status](https://secure.travis-ci.org/stephenhandley/asserts.png)](http://travis-ci.org/stephenhandley/asserts)
-
 asserts({
   "foo": function() {
     assert.equal("something", "something", "optional message");
@@ -116,3 +113,6 @@ $ node sad.js
 ```
 
 but with green for :) and red for :( that aren't showing up here but do in the console (i, yam lazy) 
+
+#Build status
+[![build status](https://secure.travis-ci.org/stephenhandley/asserts.png)](http://travis-ci.org/stephenhandley/asserts)
