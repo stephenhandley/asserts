@@ -4,7 +4,7 @@ Test grouping and formatting to make working with vanilla node assert marginally
 
 # Latest Version
 
-0.4.1
+1.0.0
 
 # Installation
 ```
@@ -17,7 +17,7 @@ or in package.json
 {
   ...
   "dependencies": {
-    "asserts": "~0.4.1"
+    "asserts": "~1.0.0"
   }
 }
 ```

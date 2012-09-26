@@ -1,18 +1,18 @@
 {
   "name": "asserts",
-  
   "description": "Test grouping and formatting to make working with vanilla node assert marginally easier",
-  
-  "version": "0.4.2",
-  
+  "version": "1.0.0",
   "license" : "MIT",
+  "main": "index.js",
   
   "repository": {
     "type": "git",
     "url": "git://github.com/stephenhandley/asserts.git"
   },
   
-  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
   
   "keywords": [
     "test", 
@@ -21,6 +21,7 @@
   
   "directories" : {
     "lib" : ".",
+    "test": "test",
     "examples": "examples"
   },
   
