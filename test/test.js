@@ -33,16 +33,32 @@ try {
   
   function plus2 (x) { return x + 2; };
   
-  var test3 = Asserts.allEqual(plus2, [[2, 4], [5, 7], [111111, 111113]]);
+  var test3 = Asserts.allEqual([
+    [plus2, 2, 4], 
+    [plus2, 5, 7], 
+    [plus2, 111111, 111113]
+  ]);
   Assert.equal(test3, true);
   
   var str = "hihi";
-  var test4 = Asserts.allEqual(str, str.indexOf, {
-    h: 0,
-    hi: 0,
-    i: 1
-  });
+  var indexOf = str.indexOf;
+  var test4 = Asserts.allEqual([
+    [str, indexOf, "h", 0],
+    [str, indexOf, "hi", 0],
+    [str, indexOf, "i", 1],
+    [str, indexOf, "b", -1]
+  ]);
   Assert.equal(test4, true);
+  
+  
+  function addThree (x, y, z) {
+    return x + y + z;
+  }
+  var test5 = Asserts.allEqual([
+    [addThree, [1, 2, 3], 6],
+    [addThree, [10, 10, 10], 30]
+  ]);
+  Assert.equal(test5, true);
   
   console.log(Display.stylize("----------------\nTEST TEST PASSED\n----------------", ['bold', 'green']));
 
