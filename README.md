@@ -46,17 +46,7 @@ asserts({
 ```
 and when run looks like this:
 
-```sh
-
-$ node happy.js
-
-:) foo
-
-:) barf
-    ing
-    ed
-
-```
+![](https://raw.github.com/stephenhandley/asserts/master/examples/happy_output.png)
 
 [examples/sad.js](https://github.com/stephenhandley/asserts/blob/master/examples/sad.js) looks like this: 
 
