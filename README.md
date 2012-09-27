@@ -93,26 +93,30 @@ asserts({
 
 and when run looks like this:
 
-```sh
-$ node sad.js 
-
-:) foo
-
-:( barf
-    ing
-    ed
-     yep: Expected 3 but got 2
-    o
-     rama
-      MATH: Expected 10 but got 2
-     hnooooo
-
-:( meh
-    oh nooooo: Expected 2 but got 1
-    
-```
-
-but with green for :) and red for :( that aren't showing up here but do in the console (i, yam lazy) 
+<div>
+  <span style="color:green;">:) foo</span>
+  <br />
+  <br />
+  <span style="color:red;">:( barf</span>
+  <br />
+  <span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;ing</span>
+  <br />
+  <span style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;ed</span>
+  <br />
+  <span style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration:underline">yep</span>: Expected 3 but got 2</span>
+  <br />  
+  <span style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;o</span>
+  <br />  
+  <span style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rama</span>
+  <br />
+  <span style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration:underline">MATH</span>: Expected 10 but got 2</span>
+  <span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;hnooooo</span>
+  <br/>
+  <br/>
+  <span style="color:red;">:( meh</span>
+  <br />
+  <span style="color:green;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-decoration:underline">oh nooooo</span>: Expected 2 but got 1</span>
+</div>
 
 Check test/test.js for example of Asserts.allEqual (TODO: add here)
 
