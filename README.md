@@ -93,7 +93,7 @@ asserts({
 
 and when run looks like this:
 
-![](http://github.com/stephenhandley/asserts/repository/raw/master/examples/sad_output.png)
+![](https://raw.github.com/stephenhandley/asserts/master/examples/sad_output.png)
 
 Check test/test.js for example of Asserts.allEqual (TODO: add here)
 
