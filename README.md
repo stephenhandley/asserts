@@ -4,7 +4,7 @@ Test grouping and formatting to make working with vanilla node assert marginally
 
 # Latest Version
 
-2.0.0
+2.1.0
 
 # Installation
 ```
@@ -17,7 +17,7 @@ or in package.json
 {
   ...
   "dependencies": {
-    "asserts": "~2.0.0"
+    "asserts": "~2.1.0"
   }
 }
 ```
@@ -85,7 +85,7 @@ and when run looks like this:
 
 ![](https://raw.github.com/stephenhandley/asserts/master/examples/sad_output.png)
 
-Check test/test.js for example of Asserts.allEqual (TODO: add here)
+Check test/test.js for example of Asserts.allEqual and Asserts.dir (TODO: add here)
 
 #Build status
 [![build status](https://secure.travis-ci.org/stephenhandley/asserts.png)](http://travis-ci.org/stephenhandley/asserts)

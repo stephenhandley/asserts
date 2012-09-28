@@ -60,6 +60,8 @@ try {
   ]);
   Assert.equal(test5, true);
   
+  // TODO add test for Asserts.dir
+  
   console.log(Display.stylize("----------------\nTEST TEST PASSED\n----------------", ['bold', 'green']));
 
 } catch (error) {
