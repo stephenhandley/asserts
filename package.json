@@ -1,7 +1,7 @@
 {
   "name": "asserts",
   "description": "Test grouping and formatting to make working with vanilla node assert marginally easier",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "license" : "MIT",
   "main": "lib",
   

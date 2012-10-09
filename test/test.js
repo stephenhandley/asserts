@@ -4,8 +4,9 @@ var Display = require('../lib/display');
 
 try {
 
-  var test1 = Asserts(function () {
+  var test1 = Asserts((function () {
     var blah = "blah";
+    
     return {
       ack: function () {
         Assert.equal(blah, "blah");
@@ -14,10 +15,9 @@ try {
         Assert.equal("hi", "hi");
       }
     };
-  });
+  })());
   
   Assert.equal(test1, true);
-  
   var test2 = Asserts({
     something: {
       yes: function () {
@@ -28,7 +28,6 @@ try {
       }
     }
   });
-  
   Assert.equal(test2, false);
   
   function plus2 (x) { return x + 2; };
