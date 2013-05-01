@@ -1,10 +1,12 @@
-var assert = require('assert');
-var asserts = require('../');
+var Assert = require('assert');
+var Asserts = require('../lib/');
 
-asserts({
+Asserts({
   "foo": function() {
     assert.equal("something", "something", "optional message");
     assert.equal(2, 2);
   },
   "barf" : "string not allowed"
+}, function (error) {
+  console.log("WHUT");
 });

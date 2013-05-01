@@ -1,28 +1,30 @@
-var assert = require('assert');
-var asserts = require('../');
+var Assert = require('assert');
+var Asserts = require('../lib/');
 
-asserts({
+Asserts({
   "foo": function() {
-    assert.equal("something", "something", "optional message");
-    assert.equal(2, 2);
+    Assert.equal("something", "something", "optional message");
+    Assert.equal(2, 2);
   },
   "barf" : {
     "ing": function () {
-      assert.equal(1, 1, "okay");
+      Assert.equal(1, 1, "okay");
     },
     "ed": function() {
-      assert.equal(2, 3, "yep");
+      Assert.equal(2, 3, "yep");
     },
     "o": {
       "rama": function() {
-        assert.equal(2, 10, "MATH");
+        Assert.equal(2, 10, "MATH");
       },
       "hnooooo": function() {
-        assert.equal(1, 1);
+        Assert.equal(1, 1);
       }
     }
   },
   "meh": function() {
-    assert.equal(1, 2, "oh nooooo");
+    Assert.equal(1, 2, "oh nooooo");
   }
+}, function (error) {
+  console.log("SAD");
 });
