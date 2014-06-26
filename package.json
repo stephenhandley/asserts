@@ -1,43 +1,34 @@
 {
   "name": "asserts",
   "description": "Test grouping and formatting to make working with vanilla node assert marginally easier",
-  "version": "4.0.0",
-  "license" : "MIT",
-
+  "version": "4.0.1",
+  "license": "MIT",
   "main": "lib/index.js",
-
   "repository": {
     "type": "git",
     "url": "git://github.com/stephenhandley/asserts.git"
   },
-
   "bugs": {
-    "url" : "http://github.com/stephenhandley/asserts/issues"
+    "url": "http://github.com/stephenhandley/asserts/issues"
   },
-
   "scripts": {
     "test": "node test/test.js"
   },
-
   "keywords": [
     "test",
     "assert"
   ],
-
-  "engines" : {
-    "node" : ">=0.10.5"
+  "engines": {
+    "node": ">=0.10.5"
   },
-
-  "directories" : {
-    "lib" : "lib",
+  "directories": {
+    "lib": "lib",
     "test": "test",
     "examples": "examples"
   },
-
   "dependencies": {
-    "type-of-is": "3.1.x"
+    "type-of-is"  : "~3.3.0"
   },
-
   "author": {
     "name": "Stephen Handley",
     "email": "stephen.handley@gmail.com",
