@@ -4,11 +4,11 @@ Test grouping and formatting to make working with vanilla node assert marginally
 
 # Latest Version
 
-4.0.1
+4.0.2
 
 # Installation
 ```
-npm install asserts
+npm install asserts --save
 ```
 
 or in package.json
@@ -17,7 +17,7 @@ or in package.json
 {
   ...
   "dependencies": {
-    "asserts": "4.0.1"
+    "asserts": "4.0.2"
   }
 }
 ```
